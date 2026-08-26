@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Blog del Poke Trainer</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles2.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/pokebola.png" alt="Pokebola" width="50">
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="Formulario">
+            <h2>Para Contáctanos Ingresa tus datos correctamente</h2>
+            <p>También puedes dejarnos tu comentario de por qué tus 6 Pokémon y qué tipo de entrenador eres.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre..." required minlength="3" maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="mail">E-mail</label>
+                    <input type="email" id="mail" placeholder="poketrainer@outlook.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="xxxxxxxx" required>
+                </div>
+
+                <!-- Agregué el campo para que de verdad dejen el comentario que prometes arriba -->
+                <div class="form-group">
+                    <label for="comentario">Tu comentario</label>
+                    <textarea id="comentario" rows="4" placeholder="Cuéntanos sobre tu equipo..."></textarea>
+                </div>
+
+                <button type="submit">Enviar</button> 
+            </form>
+       </section>
+
+    </main>
+    <div id="oculto"></div>
+    <footer>
+        <p>Todos los Derechos Reservados por el Pokétrainer &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

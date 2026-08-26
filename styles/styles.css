@@ -1,0 +1,261 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    
+    background-image: url("../img/fondo-mobil.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+
+.container {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto; 
+    text-align: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+    border-radius: 20px; 
+}
+
+.pokebola-6pack {
+    width: 12%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pokebola-6pack:active {
+    animation: girarPokebola 0.6s linear;
+}
+
+@keyframes girarPokebola {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    display: flex;               
+    justify-content: center;     
+    align-items: center;        
+    background-color: violet;    
+    width: 100%; 
+                   
+    padding: 10px 0;      
+    border-radius: 40px; 
+    margin: 0 auto;      
+}
+
+nav {
+    width: 100%;
+    max-width: 700px;            
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;               
+    flex-direction: row;         
+    justify-content: center;     
+    gap: 20px;                   
+}
+
+nav ul li a {
+    display: flex;               
+    align-items: center;        
+    gap: 8px;                  
+    text-decoration: none;     
+    color: #333;               
+    font-weight: bold;
+}
+.caja1 {
+    display: block;
+    box-sizing: content-box;
+    margin: 10px;
+    border: 4px solid purple; 
+    border-radius: 20px;       
+}
+.caja2 {
+    display: block;
+    box-sizing: content-box;
+    margin: 10px;
+    border: 4px solid violet; 
+    border-radius: 20px;       
+}
+.caja3 {
+    display: block;
+    box-sizing: content-box;
+    margin: 10px;
+    border: 4px solid beige; 
+    border-radius: 20px;       
+}
+
+.caja4 {
+    display: block;
+    box-sizing: content-box;
+    margin: 10px;
+    border: 4px solid gray; 
+    border-radius: 20px;       
+}
+.caja5 {
+    display: block;
+    box-sizing: content-box;
+    margin: 10px;
+    border: 4px solid cornflowerblue; 
+    border-radius: 20px;       
+}
+
+.caja6 {
+    display: block;
+    box-sizing: content-box;
+    margin: 10px;
+    border: 4px solid blue; 
+    border-radius: 20px;       
+}
+
+footer{
+
+    display: block;
+    box-sizing: content-box;
+    margin: 10px;
+    border: 4px solid black;
+    background-color: rgba(241, 167, 238,2);
+    text-align: center;
+    justify-content: center;
+    height: 100px;
+
+}
+.Formulario{
+    display: 
+    box-sizing: content-box;
+}
+#oculto{
+    margin-bottom: 0 auto;
+}
+footer {
+    display: flex;
+    justify-content: center;     
+    align-items: center;         
+    height: 100px;               
+    width: 100%;
+}
+
+footer span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;          
+}
+@media (min-width: 501px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+/* Agregado: fondo 4K para escritorio */
+@media (min-width: 1200px) {
+    body {
+        background-image: url("../img/fondodesktop.png");
+    }
+}
+
+/* Agregado: transición base + hover con rotación diagonal doble para las cajas */
+.caja1, .caja2, .caja3, .caja4, .caja5, .caja6 {
+    transition: transform 0.4s ease;
+}
+.caja1:hover, .caja3:hover, .caja5:hover {
+    transform: rotate(8deg) rotate3d(1, 1, 0, 15deg);
+}
+.caja2:hover, .caja4:hover, .caja6:hover {
+    transform: rotate(-8deg) rotate3d(1, 1, 0, -15deg);
+}
+
+/* Agregado: border-radius en las imágenes */
+.container img {
+    border-radius: 20px;
+    max-width: 75%;
+    overflow: hidden;
+}
+
+/* Agregado: nav con forma de botones y animación */
+nav ul li a {
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+nav ul li a:hover {
+    background-color: white;
+    transform: scale(1.08);
+}
+
+/* Agregado: empujar el footer al pie de la página aunque el contenido sea corto */
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+footer {
+    margin-top: auto;
+}
+
+/* Agregado: evita que el body se estire horizontalmente por ser flex y descentre el footer */
+html, body {
+    overflow-x: hidden;
+}
+header, main, footer {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Agregado: corrige que el footer se desbordaba por mezclar box-sizing:content-box con width:100% + margin + border */
+footer {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Agregado: desde 900px, las cajas de los Pokémon se acomodan en filas de 3 */
+@media (min-width: 900px) {
+    main.container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    main.container > section {
+        flex-basis: 100%;
+    }
+    main.container > div[class^="caja"] {
+        flex: 0 1 calc(33.333% - 20px);
+    }
+}
+@media (min-width: 900px) {
+    main.container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    main.container > section {
+        flex-basis: 100%;
+    }
+    main.container > div[class^="caja"] {
+        flex: 0 1 calc(33.333% - 20px);
+    }
+}

@@ -1,0 +1,38 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    margin: 20px auto 0;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: violet;
+    cursor: pointer;
+}
